@@ -1,0 +1,86 @@
+{
+    // include代表需要编译哪些文件；路径：两个**,代表当前文件下的所有目录，一个*代表当前文件夹下的所有文件
+    "include": [
+        "./src/*",
+    ],
+
+    // 不需要被编译的文件
+    "exclude": [],
+
+    // 定义被继承得配置文件
+    // "extends":"",
+
+    // 需要编译的文件，一个一个放这里;
+    // "files": [
+
+    // ],
+
+    // 编译器的选项
+    "compilerOptions": {
+
+        // 用來指定ts被编译的ES的版本  "target":"esnext"这是最新版本
+        "target": "ES6",
+
+        // 指定要使用的模块化规范
+        "module": "es2015",
+        // "module":"UMD",
+        // "module": "system",
+
+        // 用来指定项目中用到的库
+        "lib": [
+            "DOM",
+            "ES6"
+        ],
+
+        "paths": {
+            "@/*": ["./src/*"],
+        },
+
+        // 用来指定编译后文件所在的目录,编译后的文件放在哪
+        "outDir": "./dist",
+
+        // 所有全局作用域中的代码合并为一个文件，如果要使用模块化，必须这么设置模块化"module":"system"
+        // "outFile": "./dist/app.js",
+
+        // 是否对js文件进行编译，默认是false
+        "allowJs": true,
+
+        // 检查js代码是否符合逻辑规范，默认是false
+        "checkJs": true,
+
+        //是否移除注释
+        "removeComments": true,
+
+        // 不生成编译后的文件,只是执行过程，只是检查语法
+        "noEmit": false,
+
+        //当有错误的时候不生成编译后的文件
+        "noEmitOnError": false,
+
+        //所有严格检查的总开关
+        "strict": false,
+
+        // 用来设置编译后的文件，是否采用严格模式
+        "alwaysStrict": true,
+
+        // 不允许出现隐式的any类型
+        "noImplicitAny": true,
+
+        // 不允许出现隐式的this
+        "noImplicitThis": true,
+
+        // 严格的检查空值  例：div不存在，在获取dom的时候
+        "strictNullChecks": true,
+
+        // 生成声明文件
+        "declaration": true,
+
+        // 声明文件存放目录
+        "declarationDir": "./dist/typings",
+
+        "declarationMap": false,
+
+        "moduleResolution": "node",
+    }
+    
+}
